@@ -1,0 +1,105 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/btn_blue_login</item>
+        <item name="colorPrimaryDark">@color/btn_blue_login</item>
+        <item name="colorAccent">@color/btn_blue_login</item>
+    </style>
+
+    <style name="dialogstyle"  parent="Theme.AppCompat.Light.NoActionBar">
+        <!--设置dialog的背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--设置Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--设置无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--设置窗口内容不覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置动画，在这里使用让它继承系统的Animation.Dialog-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--blueTheme-->
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBluePrimary</item>
+        <item name="colorPrimaryDark">@color/colorBluePrimaryDark</item>
+        <item name="colorAccent">@color/colorBluePrimaryDark</item>
+    </style>
+
+    <!--规避白屏的做法-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@mipmap/welcome</item>
+    </style>
+
+    <!-- 加载滚动条样式 -->
+    <style name="loading">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateDrawable">@drawable/progressloading</item>
+        <item name="android:indeterminateDuration">1000</item>
+        <item name="android:indeterminateOnly">true</item>
+    </style>
+    <!--自定义的时间控件CustomDatePidker-->
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <!--弹出拍照对话框的动画-->
+    <style name="dialogWindowAnim" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+<!---->
+    <style name="AVLoadingIndicatorView">
+        <item name="minWidth">48dip</item>
+        <item name="maxWidth">48dip</item>
+        <item name="minHeight">48dip</item>
+        <item name="maxHeight">48dip</item>
+        <item name="indicatorName">LineSpinFadeLoaderIndicator</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Large">
+        <item name="minWidth">72dip</item>
+        <item name="maxWidth">72dip</item>
+        <item name="minHeight">72dip</item>
+        <item name="maxHeight">72dip</item>
+        <item name="indicatorName">LineSpinFadeLoaderIndicator</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Small">
+        <item name="minWidth">36dip</item>
+        <item name="maxWidth">36dip</item>
+        <item name="minHeight">36dip</item>
+        <item name="maxHeight">36dip</item>
+        <item name="indicatorName">LineSpinFadeLoaderIndicator</item>
+    </style>
+
+    <style name="My_activity" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
+
+    <!--PopupWindow 从底部弹出-->
+    <style name="AnimationBottomFade">
+        <item name="android:windowEnterAnimation">@anim/in_bottomtotop</item>
+        <item name="android:windowExitAnimation">@anim/out_toptobottom</item>
+    </style>
+</resources>

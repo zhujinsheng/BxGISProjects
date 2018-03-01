@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:background="@color/tv_gray_4"
+    >
+    <ImageView
+        android:id="@+id/imageviewadd"
+        android:layout_width="@dimen/x120"
+        android:layout_height="@dimen/x120"
+        android:layout_margin="5dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:padding="@dimen/x18"
+        android:src="@mipmap/item_photo_add_selector"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"/>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="@dimen/x40"
+        android:layout_height="@dimen/x40"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/x8"
+        android:src="@mipmap/ic_delete_photo"
+        android:visibility="invisible"
+        />
+</RelativeLayout>

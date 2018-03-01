@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">移动巡检</string>
+    <string name="login_find_pw">忘记密码</string>
+
+    <!--6.0权限管理-->
+    <string name="permission_tip">在设置-应用-权限中开启%1$s权限，以保证功能的正常使用</string>
+    <string name="permission_read_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_PHONE_STATE</string>
+    <string name="permission_call_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CALL_PHONE</string>
+    <string name="permission_camera_hint">请前往设置→应用信息→权限管理 开启相机权限，否则会影响到相机拍照</string>
+    <string name="permission_access_fine_location_hint">请前往设置→应用信息→权限管理 开启定位权限，否则会影响到位置获取失败</string>
+    <string name="permission_access_coarse_location_hint">请前往设置→应用信息→权限管理 开启定位权限，否则会影响到位置获取失败</string>
+    <string name="permission_read_external_hint">请前往设置→应用信息→权限管理 开启存储权限，否则会影响到文件保存失败</string>
+    <string name="permission_white_external_hint">请前往设置→应用信息→权限管理 开启存储权限，否则会影响到文件保存失败</string>
+
+    <!--个人中心-->
+    <string name="str_center_inspection_ing">巡检中</string>
+    <string name="str_center_inspection_finish">巡检完成</string>
+    <string name="str_center_edit">资料编辑</string>
+    <string name="str_center_cache_clean">清除缓存</string>
+    <string name="str_center_safety">帐号与安全</string>
+    <string name="str_center_feedback">意见反馈</string>
+    <string name="str_center_about_us">关于我们</string>
+    <string name="str_center_update_app">系统更新</string>
+    <string name="str_center_login_out">退出登陆</string>
+
+    <!--首页-->
+    <string name="home_title">茂名港移动巡检系统</string>
+    <string name="detail_title">巡检反馈</string>
+    <string name="detail_title_detail">巡检详情</string>
+    <string name="review_feedback">整改复查巡检反馈</string>
+    <string name="home_inspe_type">项目类型:</string>
+    <string name="home_empty">暂无整改复查任务</string>
+    <string name="home_empty_re">点击刷新</string>
+
+    <string name="home_rv_tip">整改复查巡检</string>
+    <string name="item_review_type">整改复检</string>
+
+    <!--巡检详情-->
+    <string name="inspection_name">巡检主题</string>
+    <string name="inspector">现场巡检人</string>
+    <string name="inspection_other_inspectors">陪同人</string>
+    <string name="inspection_begin_time">开始日期</string>
+    <string name="inspection_end_time">截止日期</string>
+    <string name="inspection_location">巡检企业</string>
+    <string name="inspection_subtype">巡检事项</string>
+    <string name="inspection_project_content">巡检清单</string>
+    <string name="inspection_other_requests">备注：</string>
+    <string name="inspection_accessory">附件：</string>
+    <string name="inspection_relese">现场发布</string>
+    <string name="review_commit">复查提交</string>
+    <string name="inspection_company">请选择公司</string>
+    <string name="signature_name">巡检人签名</string>
+    <string name="retract">撤销</string>
+    <string name="clean">清空</string>
+    <string name="empty_data_tip">目前暂无巡检数据，点击刷新！</string>
+
+    <string name="review_history">整改复查详情</string>
+    <string name="inspection_otherbz">巡检其他要求：</string>
+    <string name="inspection_accessory1">巡检要求附件：</string>
+    <string name="feedback_bz">巡检反馈备注：</string>
+    <string name="feedback_accessory1">巡检反馈的附件：</string>
+
+
+
+    <!--RecyclerView 刷新框架footer-->
+    <string name="list_footer_loading">正在加载中…</string>
+    <string name="list_footer_network_error">点击重新加载</string>
+    <string name="list_footer_end">已加载完</string>
+
+
+    <!-- Error View -->
+    <string name="error_view_click_to_refresh">点击屏幕,重新加载</string>
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
+    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
+    <string name="tip_network_error">没有可用的网络</string>
+
+    <!-- 自定义日期选择控件DatePickerView -->
+    <string name="cancle">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="select_date">选择日期</string>
+    <string name="current_date">当前日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="current_time">当前时间</string>
+
+</resources>

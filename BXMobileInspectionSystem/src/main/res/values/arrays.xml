@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+
+
+    <string-array name="permissions">
+        <!--<item>@string/permission_recode_audio_hint</item>-->
+        <!--<item>@string/permission_get_accounts_hint</item>-->
+        <item>@string/permission_read_phone_hint</item>
+        <item>@string/permission_call_phone_hint</item>
+        <item>@string/permission_camera_hint</item>
+        <item>@string/permission_access_fine_location_hint</item>
+        <item>@string/permission_access_coarse_location_hint</item>
+        <item>@string/permission_read_external_hint</item>
+        <item>@string/permission_white_external_hint</item>
+    </string-array>
+    <string-array name="bank_items">
+        <item>中国银行</item>
+        <item>中国农业银行</item>
+        <item>中国建设银行</item>
+        <item>中国工商银行</item>
+        <item>中国邮政储蓄银行</item>
+        <item>中国光大银行</item>
+        <item>中国民生银行</item>
+        <item>广州农村商业银行</item>
+        <item>广州银行</item>
+        <item>广发银行</item>
+        <item>招商银行</item>
+        <item>中信银行</item>
+        <item>浦发银行</item>
+        <item>交通银行</item>
+        <item>平安银行</item>
+        <item>兴业银行</item>
+        <item>华夏银行</item>
+    </string-array>
+</resources>

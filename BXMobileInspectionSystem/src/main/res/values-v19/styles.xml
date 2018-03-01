@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+            <item name="android:windowTranslucentStatus">true</item>
+            <item name="android:windowTranslucentNavigation">true</item>
+        <item name="colorPrimary">@color/btn_blue_login</item>
+        <item name="colorPrimaryDark">@color/btn_blue_login</item>
+        <item name="colorAccent">@color/btn_blue_login</item>
+    </style>
+
+
+
+
+</resources>

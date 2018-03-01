@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:loonggg="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/banner_layout"
+    android:orientation="vertical">
+
+    <com.bxgis.bxportal.widget.rvBanner.RecyclerViewBanner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y300"
+        loonggg:rvb_indicatorSelectedSrc="@drawable/banner_point_select"
+        loonggg:rvb_indicatorUnselectedSrc="@drawable/banner_point"
+        app:rvb_indicatorSpace="@dimen/x20"
+        tools:background="@color/btn_blue_login"/>
+    />
+</LinearLayout>

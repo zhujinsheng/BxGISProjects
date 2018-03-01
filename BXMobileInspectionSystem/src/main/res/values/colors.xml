@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="center_inspection">#FFc71e</color>
+
+    <!--blue-->
+    <color name="colorBluePrimary">#2196F3</color>
+    <color name="colorBluePrimaryDark">#1976D2</color>
+    <color name="colorBlueAccent">#FF4081</color>
+    <color name="colorBluePrimaryCenter">#062748</color>
+    <color name="black">#000000</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="custom_bg">#FBFBFB</color>
+
+    <color name="tv_black_0">#302f2f</color>
+    <color name="tv_black_1">#5e5d5d</color>
+    <color name="tv_black_2">#717070</color>
+    <color name="tv_black_787878">#787878</color>
+    <color name="tv_gray_2">#aeadad</color>
+    <color name="tv_gray_3">#cecdcd</color>
+    <color name="tv_gray_4">#f7e7e7e7</color>
+    <color name="tv_gray_aaaaaa">#aaaaaa</color>
+    <color name="tv_gray_b">#E6EAEB</color>
+    <color name="tv_gray_line">#e2e1e1</color>
+    <color name="tv_blu_find_pw">#66B4DB</color>
+    <color name="btn_blue_login">#0094DB</color>
+    <color name="action_bar_blue">#046E96</color>
+    <color name="red">#ed321a</color>
+
+    <color name="tv_main_nav">#898989</color>
+
+    <!--loadinglayout中用到的颜色-->
+    <color name="base_text_color_light">#909090</color>
+    <color name="base_loading_background">#f7f7f7</color>
+
+    <!--自定义的时间控件颜色库CustomDatePidker-->
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+    <color name="color1">#F0F0F0</color>
+    <color name="color2">#FFFFFF</color>
+    <color name="color3">#B0B0B0</color>
+    <color name="color4">#666666</color>
+    <color name="color5">#57C5E8</color>
+</resources>

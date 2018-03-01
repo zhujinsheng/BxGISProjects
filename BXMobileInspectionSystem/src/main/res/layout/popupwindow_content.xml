@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:descendantFocusability="blocksDescendants">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_projectlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_back_home"
+        android:layout_gravity="center_horizontal|bottom"
+        android:minHeight="@dimen/y250"
+        android:paddingLeft="@dimen/x45"
+        android:paddingRight="@dimen/x45"
+        android:paddingTop="@dimen/x30"/>
+
+    <ImageView
+        android:id="@+id/iv_back_home"
+        android:layout_width="@dimen/x80"
+        android:layout_height="@dimen/x80"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/x15"
+        android:scaleType="fitXY"
+        android:src="@mipmap/delecte_icon"/>
+
+</RelativeLayout>

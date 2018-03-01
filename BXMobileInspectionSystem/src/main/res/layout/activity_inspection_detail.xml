@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_now_inspecrion_relase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.bxgis.bxportal.ui.inspection.InspectionDetailActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/btn_blue_login"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/y15"
+        android:paddingTop="@dimen/y15">
+
+        <ImageView
+            android:id="@+id/back_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/x50"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/detail_title_detail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/home_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_top"
+        android:layout_marginBottom="@dimen/y20"
+        android:layout_marginTop="@dimen/y15"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y25"
+            android:paddingLeft="@dimen/x30"
+            android:paddingRight="@dimen/x30"
+            android:paddingTop="@dimen/y20">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="@string/inspection_name"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/et_inspection_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x15"
+                    android:text="sssssssssss"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/inspector"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/tv_inspector"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x15"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/inspection_other_inspectors"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/tv_other_inspectors"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x15"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/inspection_begin_time"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/inspection_begin_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x15"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/inspection_end_time"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/inspection_end_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x15"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="@string/inspection_location"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/inspection_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x15"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/textView2"
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:background="@mipmap/come_in"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/review_history"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/inspection_project_content"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <com.bxgis.bxportal.widget.NestedExpandaleListView
+                    android:id="@+id/el_content"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_weight="1"
+                    android:childDivider="@null"
+                    android:divider="@null"
+                    android:minHeight="@dimen/y100"
+                    android:paddingRight="@dimen/x10"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/inspection_otherbz"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+
+                <TextView
+                    android:id="@+id/tv_other_requests"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="@dimen/x5"
+                    android:text=""
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inspection_accessory1"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+                    <!-- cyc外嵌套一个布局，再设置 android:descendantFocusability="blocksDescendants"  这样就能全部展开-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_addphoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x15"
+                        android:layout_marginTop="@dimen/x15"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/feedback_bz"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+
+                <TextView
+                    android:id="@+id/feedback_other_requests"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/x10"
+                    android:text=""
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedback_accessory1"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+                    <!-- cyc外嵌套一个布局，再设置 android:descendantFocusability="blocksDescendants"  这样就能全部展开-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_feedback_accessory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x15"
+                        android:layout_marginTop="@dimen/x15"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:id="@+id/ll_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="电子签名："
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <ImageView
+                    android:id="@+id/iv_signature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x15"
+                    android:layout_marginTop="@dimen/x10"
+                    android:background="@drawable/bg_tv_content"
+                    android:padding="@dimen/x8"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/x15"
+    android:layout_marginLeft="@dimen/x15">
+    <TextView android:id="@+id/tv_project_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="安全检查"
+        android:textSize="@dimen/sp_16"
+              android:layout_marginBottom="@dimen/y12"
+        android:textColor="@color/tv_black_1"
+        />
+    <TextView android:id="@+id/tv_subproject_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="安全检查"
+              android:layout_marginLeft="@dimen/x30"
+              android:textSize="@dimen/sp_15"
+              android:textColor="@color/tv_black_2"
+              android:layout_marginBottom="@dimen/y6"
+        />
+    <TextView android:id="@+id/tv_subproject_content"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="安全检查"
+              android:layout_marginLeft="@dimen/x60"
+              android:textSize="@dimen/sp_14"
+              android:textColor="@color/tv_gray_aaaaaa"
+              android:layout_marginBottom="@dimen/y12"
+        />
+
+</LinearLayout>

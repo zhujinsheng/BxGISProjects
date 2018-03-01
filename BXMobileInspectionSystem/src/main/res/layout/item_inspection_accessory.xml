@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_item"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:layout_marginLeft="@dimen/dp_4"
+              android:orientation="horizontal"
+             >
+
+
+        <ImageView
+            android:id="@+id/iv_accessory_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/image"
+            android:padding="@dimen/dp_3"
+            android:layout_gravity="center_vertical"
+            android:text="2017年下半年企业安全检查计划"
+            android:textColor="@color/tv_black_1"
+          />
+
+        <TextView
+            android:id="@+id/tv_accessory_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_gravity="center_vertical"
+           android:textSize="@dimen/sp_16"
+            android:gravity="start"
+            android:padding="4dp"
+            android:text="巡检要求清单dddddddddddddddddddddddddd.xlx"
+            android:textColor="@color/tv_black_2"/>
+
+</LinearLayout>

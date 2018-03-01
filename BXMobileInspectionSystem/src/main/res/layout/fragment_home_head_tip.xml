@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/ll_head"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_head_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/tv_blu_find_pw"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:paddingLeft="10dp"
+        android:text="@string/home_rv_tip"
+        android:textSize="@dimen/center_content_size"/>
+
+</LinearLayout>

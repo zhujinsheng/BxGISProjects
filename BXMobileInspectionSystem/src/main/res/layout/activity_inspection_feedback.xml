@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_now_inspecrion_relase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.bxgis.bxportal.ui.inspection.InspectionDetailActivity"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/btn_blue_login"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/y15"
+        android:paddingBottom="@dimen/y15">
+
+        <ImageView
+            android:id="@+id/back_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/x70"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="移动巡检反馈"
+            android:textColor="@color/white"
+            android:textSize="@dimen/home_title"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/release"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y85"
+        android:layout_alignParentBottom="true"
+        android:background="@color/btn_blue_login"
+        android:text="@string/review_commit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"/>
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_top"
+        android:layout_above="@+id/release"
+        android:scrollbars="none"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y30"
+            android:paddingLeft="@dimen/x30"
+            android:paddingRight="@dimen/x30"
+            android:paddingTop="@dimen/y30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x185"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/inspection_name"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/et_inspection_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x10"
+                    android:text=""
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x185"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inspector"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/tv_inspector"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x10"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x185"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inspection_other_inspectors"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/tv_other_inspectors"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x10"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x182"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inspection_begin_time"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/inspection_begin_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x10"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x182"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inspection_end_time"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/inspection_end_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x10"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x185"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="@string/inspection_location"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/inspection_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x10"
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/textView2"
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:background="@mipmap/come_in"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/review_history"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/inspection_project_content"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <com.bxgis.bxportal.widget.NestedExpandaleListView
+                    android:id="@+id/el_content"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_weight="1"
+                    android:childDivider="@null"
+                    android:divider="@null"
+                    android:minHeight="@dimen/y100"
+                    android:paddingRight="@dimen/x10"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/inspection_otherbz"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/tv_other_requests"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="@dimen/x5"
+                    android:text=""
+                    android:textColor="@color/tv_black_2"
+                    android:textSize="@dimen/sp_15"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inspection_accessory1"
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+                <!-- cyc外嵌套一个布局，再设置 android:descendantFocusability="blocksDescendants"  这样就能全部展开-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_addphoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_marginTop="@dimen/x10"
+                    />
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/tv_gray_3"/>
+            <LinearLayout
+                android:id="@+id/ll_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="电子签名："
+                    android:textColor="@color/tv_black_0"
+                    android:textSize="@dimen/sp_16"/>
+
+                <ImageView
+                    android:id="@+id/iv_show_signature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/y15"
+                    android:background="@drawable/bg_tv_content"
+                    android:padding="@dimen/x6"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+            <!--这部分是针对现场巡检的布局-->
+
+            <LinearLayout
+                android:id="@+id/ll_other1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/feedback_bz"
+                        android:textColor="@color/tv_black_0"
+                        android:textSize="@dimen/sp_16"/>
+                <com.bxgis.bxportal.widget.CustomEditText
+                    android:id="@+id/feedback_other_requests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_tv_content"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/x10"
+                    android:minHeight="@dimen/y80"
+                    android:text=""
+                    android:textColor="@color/tv_black_1"
+                    android:textSize="@dimen/sp_15"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/y20"
+                    android:layout_marginTop="@dimen/y20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feedback_accessory1"
+                        android:textColor="@color/tv_black_0"
+                        android:textSize="@dimen/sp_16"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_feedback_accessory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x15"
+                        android:layout_marginTop="@dimen/x15"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_signture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/y15"
+                    android:layout_marginTop="@dimen/y15"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/y10"
+                        >
+
+                        <TextView
+                            android:id="@+id/sig_clean"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/bg_selsetor_inspection"
+                            android:padding="@dimen/y5"
+                            android:text="@string/clean"
+                            android:textColor="@color/btn_blue_login"
+                            android:textSize="@dimen/sp_14"/>
+
+                        <TextView
+                            android:id="@+id/sig_retract"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/x15"
+                            android:layout_toLeftOf="@id/sig_clean"
+                            android:layout_toStartOf="@id/sig_clean"
+                            android:background="@drawable/bg_selsetor_inspection"
+                            android:padding="@dimen/x5"
+                            android:text="@string/retract"
+                            android:textColor="@color/btn_blue_login"
+                            android:textSize="@dimen/sp_14"/>
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/signature_name"
+                            android:textColor="@color/tv_black_0"
+                            android:textSize="@dimen/sp_16"/>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_tv_content"
+                        android:orientation="horizontal">
+
+                        <com.bxgis.bxportal.widget.SignatureView
+                            android:id="@+id/signature_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_180"
+                            android:layout_margin="@dimen/y10"
+                            android:padding="@dimen/y8"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
