@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="js/weUI/weui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/weUI/jquery-weui.min.css" rel="stylesheet" type="text/css">
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+   	<link href="css/other.css" rel="stylesheet" type="text/css" />
+    <title>处理事件</title>
+</head>
+<body>
+	<header class="head">
+		<h4>处理事件</h4>
+		<span class="back" onclick="window.history.back(-1)"></span>
+	</header>
+	<div class="content deatil-content check">
+		<div class="weui-tab">
+			  <div class="weui-navbar">
+			    <a class="weui-navbar__item  weui-bar__item--on" href="#tab1">处理事件</a>
+			    <a class="weui-navbar__item" href="#tab2">事件流转</a>
+			  </div>
+			  <div class="weui-tab__bd event-doing-container">
+			    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+		    		<div class="event-doing-list clearfix">
+						<textarea placeholder="请输入详细描述" id="textarea"></textarea>
+					</div>
+					<div class="weui-cells weui-cells_form weui-cells_pbottom">
+						<div class="weui-cell">
+						    <div class="weui-cell__bd">
+						      <div class="weui-uploader">
+						        <div class="weui-uploader__hd">
+						          <p class="weui-uploader__title">上传图片</p>
+						          <div class="weui-uploader__info"><span class="weui-uploader__info_done">0</span>/3</div>
+						        </div>
+						        <div class="weui-uploader__bd">
+						          <ul class="weui-uploader__files" id="uploaderFiles">
+						          </ul>
+						          <div class="weui-uploader__input-box">
+						            <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple=""  capture="camera">
+						          </div>
+						        </div>
+						      </div>
+						    </div>  
+			  			</div>
+					</div>
+					<!--  大图预览  -->
+					<div class="weui-gallery" style="display:none">
+					  	<span class="weui-gallery__img" style="background-image: url(xxx);"></span>
+					  	<div class="weui-gallery__opr">
+						    <a href="javascript:" class="weui-gallery__del" id="weui-gallery__del">
+						      <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+						    </a>
+					  	</div>
+					</div>
+					<div class="report_btnbox fixedbtn">
+						<button class="report_btn report_btn1">上报</button>
+					</div>
+			    </div>
+			    <div id="tab2" class="weui-tab__bd-item events-list2">
+			    	<div class="weui-cells weui-cells_radio">
+				      <label class="weui-cell weui-check__label" style="float: left;" for="x11">
+				        <div class="weui-cell__bd">
+				          <p>督办 <input class="weui-check" name="radio1" id="x11" type="radio">
+				          <span class="weui-icon-checked"></span></p>
+				        </div>
+				      </label>
+				      <label class="weui-cell weui-check__label" for="x12">
+				       	<div class="weui-cell__bd">
+				           <p>职能部门 <input class="weui-check" name="radio1" id="x12" type="radio">
+				          <span class="weui-icon-checked"></span></p>
+				        </div>
+				      </label>
+				    </div>
+			    	<div class="weui-cells">
+					  	<a class="weui-cell weui-cell_access events-list2-item" href="clr.html">
+						    <div class="weui-cell__bd">
+						      <p>处理人</p>
+						    </div>
+						    <div class="weui-cell__ft"><span  class="events-list2-name blue-font">王杰西</span> </div>
+						</a>
+					</div>
+			    	<div class="event-doing-list clearfix">
+						<textarea placeholder="请输入详细描述"></textarea>
+					</div>
+					<div class="weui-cells weui-cells_form weui-cells_pbottom">
+						<div class="weui-cell">
+						    <div class="weui-cell__bd">
+						      <div class="weui-uploader">
+						        <div class="weui-uploader__hd">
+						          <p class="weui-uploader__title">上传图片</p>
+						          <div class="weui-uploader__info"><span class="weui-uploader__info_done">0</span>/3</div>
+						        </div>
+						        <div class="weui-uploader__bd">
+						          <ul class="weui-uploader__files" id="uploaderFiles2">
+						          </ul>
+						          <div class="weui-uploader__input-box">
+						            <input id="uploaderInput2" class="weui-uploader__input" type="file" accept="image/*" multiple=""  capture="camera">
+						          </div>
+						        </div>
+						      </div>
+						    </div>  
+			  			</div>
+					</div>
+					<!--  大图预览  -->
+					<div class="weui-gallery" style="display:none">
+					  	<span class="weui-gallery__img" style="background-image: url(xxx);"></span>
+					  	<div class="weui-gallery__opr">
+						    <a href="javascript:" class="weui-gallery__del" id="weui-gallery__del">
+						      <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+						    </a>
+					  	</div>
+					</div>
+					<div class="report_btnbox fixedbtn">
+						<button class="report_btn report_btn2">上报</button>
+						
+					</div>
+			    </div> 
+			  </div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/weUI/jquery-weui.min.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+<script type="text/javascript" src="js/location.js"></script>
+<script type="text/javascript" src="js/interface.js"></script>
+<script>
+	//调用上传图片
+	window.onload=function(){
+		var n= new Upload({
+			tarinput:'uploaderInput',
+			previewTarget:'uploaderFiles'
+		});
+		var n2= new Upload({
+			tarinput:'uploaderInput2',
+			previewTarget:"uploaderFiles2"
+		});
+		
+		
+		var urls=window.location.href;
+		
+		var event_id=urls.split("=");
+	
+		//处理事件
+		$('.report_btn1').click(function(){
+			var texts=$('#textarea').val();
+			basic.ajax.handleProcess({
+				data:{"process_type":"process","handle_details":texts,"event_id":event_id[1]},
+				success: function(data){
+					if(data.id!="" && data.id!=null){
+						$.alert('上报成功',function(){
+			       			window.location.href="sjgl.html";
+			       		});
+					}
+				}
+			});
+		})
+		
+		
+		//事件流转
+		$('.report_btn2').click(function(){
+			var radioname=$('.weui-cells_radio input:radio:checked').parent('p').text();
+			alert(radioname);
+//			var texts=$('#textarea').val();
+//			$.ajax({
+//			    url: "http://localhost:18082/wzt/event/process",
+//			    type: "POST",
+//			    async: false,
+//			    dataType: "json",
+//			    data: {"process_type":"change","handle_details":texts,"event_id":event_id[1]},
+//			    success: function (data) {
+//			     	if(data.id!="" && data.id!=null)
+//			       		$.alert('上报成功',function(){
+//			       			window.location.href="sjgl.html";
+//			       		});
+//			       		
+//			       
+//		
+//			    }
+//			});
+		})
+		
+		
+	
+	}
+	
+</script>
+</html>

@@ -1,0 +1,23 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "source": {
+    "include":["./js/bxmap"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": [],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true
+    }
+  },
+  "opts": {
+    "encoding": "utf8",
+    "destination": "./api",
+    "recurse": true
+  }
+}

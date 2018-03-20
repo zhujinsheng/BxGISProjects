@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="js/weUI/weui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/weUI/jquery-weui.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+   	<link href="css/common.css" rel="stylesheet" type="text/css" />
+   	<link href="css/other.css" rel="stylesheet" type="text/css" />
+   	
+    <title>事件管理</title>
+    <script type="text/javascript" src="js/vue.js" ></script>
+   
+</head>
+<body>
+
+	<header class="head">
+		<h4>事件管理</h4>
+		<span class="back" onclick="window.history.back(-1)"></span>
+		<span class="screen"><span id="scree-nameV">增田镇</span>
+		<div class="content-trigon-zhijiao trigon-color">
+	        <span><i></i></span>
+	    </div>
+		</span>
+	</header>
+	<div id="app" class="content deatil-content check">
+		<div class="weui-tab">
+			  <div class="weui-navbar">
+			    <a class="weui-navbar__item  weui-bar__item--on" href="#tab1" @click="alldone()">全部</a>
+			    <a class="weui-navbar__item" @click="notdone()" href="#tab2">待处理</a>
+			    <a class="weui-navbar__item" href="#tab3" @click="havedone()">已处理</a>
+			    <a class="weui-navbar__item" href="#tab4" @click="mydone()">我上报</a>
+			  </div>
+			  <div class="weui-tab__bd  deatil-center">
+			    <div class="search-result-lists search-result-lists_pwk my_pwk" style="padding-top:0.6rem">
+        	<div class="search-result-lists-top search-result-lists-top_pwk" style="top: 1.6rem;">
+        		<div class="result-lists-username">海湾名称</div>
+        		<div class="result-lists-nodo">事件类别</div>
+        		<div class="result-lists-done">操作</div>
+        	</div>
+        	<div class="search-result-lists-container" style="padding-top:0px">
+        		
+    			<div class="s-side"> 
+    				<ul>
+				        <li class="s-firstItem s-nav s-nav_pwk" v-for="(item,index) in items" >
+					        <div>  
+				                <span class="nav-first">
+					                <span class="name" v-if="item.tbBay">
+					                	{{item.tbBay.name}}
+					                </span>
+				            	</span>
+				                <span class="detail-nodo">{{item.describe}}</span>
+				                <div class="detail_right">
+				                	<span class="detail-edittxt" @click="detail(index)" v-if="item.status==1">详情</span>
+									<span class="detail-edittxt" @click="drop(index)" v-if="item.status==0">处理</span>
+				                </div>
+				            </div>
+				        </li>   
+				    </ul>  
+				</div>  
+				
+        	</div>
+        </div>
+			  </div>
+		</div>
+	</div>
+	<div class="screenCenter">
+		<div class="screenShade"></div>
+		<div class="condition-screen">
+			<div class="select_list event-container">
+				<a class="selected">不限</a>
+				<a>先滩镇</a>
+				<a>骆驼镇</a>
+				<a>叶潭镇</a>
+				<a>石家镇</a>
+				<a>灯塔镇</a>
+				<a>罗湖镇</a>
+				<a>顺天镇</a>
+				<a>上莞镇</a>
+				<a>先滩镇</a>
+				<a>骆驼镇</a>
+				<a>叶潭镇</a>
+				<a>石家镇</a>
+				<a>灯塔镇</a>
+				<a>罗湖镇</a>
+				<a>顺天镇</a>
+				<a>上莞镇</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/weUI/jquery-weui.min.js"></script>
+<script src="js/swiper/swiper.min.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+
+$(function(){
+	
+		
+  	var datalist={},vm,urls;
+	$.ajax({
+		url:"http://localhost:18082/wzt/event/search",
+		type:"POST",
+		dataType:"json",
+		data:{"currentPage":1,"pageSize":10},
+		success:function(data){
+			datalist=data.rows;
+			console.log(datalist);
+			 vm = new Vue({
+				el: '#app',
+				data:{
+				    items: datalist
+				 },
+				 methods:{
+				 	drop:function(index){
+				 		urls="";
+				 		urls="clsj.html"+"?id="+vm.items[index].id;
+				 		window.location.href=urls;
+				 		
+				 	},
+				 	detail:function(index){
+				 		urls="";
+				 		urls="sjxq.html"+"?id="+vm.items[index].id;
+				 		window.location.href=urls;
+				 		
+				 	},
+//				 	detail:function(){
+//				 		urls="";
+//				 		urls="sjxq.html"+"?id="+vm.items[index].id;
+//				 		window.location.href=urls;
+//				 	},
+			 		notdone:function(){
+						$.ajax({
+							url:"http://localhost:18082/wzt/event/search",
+							type:"POST",
+							dataType:"json",
+							/*headers:{
+							"_sso_token":datas,
+								},
+							xhrFields: {  
+						          withCredentials: true  
+						     },*/
+						    data:{"status":"0"},
+						    success:function(data){
+						    	console.log(data);
+						    	vm.items=data.rows;
+						    	
+						    }
+						})
+					},
+					havedone:function(){
+						$.ajax({
+							url:"http://localhost:18082/wzt/event/search",
+							type:"POST",
+							dataType:"json",
+							
+						    data:{"status":"1"},
+						    success:function(data){
+						    	console.log(data);
+						    	vm.items=data.rows;
+						    	
+						    }
+						})
+					},
+					mydone:function(){
+						
+						$.ajax({
+							url:"http://localhost:18082/wzt/event/search",
+							type:"POST",
+							dataType:"json",
+							
+						    data:{"reporter_id":"5a41e4d59e040d541c95febc"},
+						    success:function(data){
+						    	console.log(data);
+						    	vm.items=data.rows;
+						    	
+						    }
+						})
+					},
+					alldone:function(){
+						$.ajax({
+							url:"http://localhost:18082/wzt/event/search",
+							type:"POST",
+							dataType:"json",
+
+						    success:function(data){
+						    	console.log(data);
+						    	vm.items=data.rows;
+						    	
+						    }
+						})
+					}
+					
+				 },
+				 computed:{
+				    items:function(){
+				      // `this` 指向 vm 实例
+				      return vm.items
+				    }
+				  }
+			})
+		}
+	})
+
+	
+
+	
+	
+	
+  			
+	
+	
+	
+		
+
+})
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

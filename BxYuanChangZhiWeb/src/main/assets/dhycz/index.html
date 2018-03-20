@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="js/weUI/weui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/weUI/jquery-weui.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+   	<link href="css/common.css" rel="stylesheet" type="text/css" />
+    <title>首页</title>
+</head>
+<body>
+	<header class="headIndex">
+		<i class="fa fa-userbtn" onclick="location.href='user.html'"></i>
+		<i class="fa fa-msgbtn"></i>
+	</header>
+	<div class="index-container">
+		<div class="banner">
+			<div class="swiper-container1">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><div class="banner-img"></div></div>
+			        <div class="swiper-slide"><div class="banner-img"></div></div>
+			        <div class="swiper-slide"><div class="banner-img"></div></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="toolbar-menu">
+			<div class="toolbar-menu-center">
+				<div class="toolbar-menu-girds">
+					<a class="toolbar-menu-items" href="bay.html">
+						<div class="toolbar-menu-img hw_icons"></div>
+						<p style="margin-top: 0.35rem">海湾信息</p>
+					</a>
+					<a class="toolbar-menu-items " href="xhhz.html">
+						<div class="toolbar-menu-img xh_icons"></div>
+						<p>巡海汇总</p>
+					</a>
+					<a class="toolbar-menu-items" href="sjtj.html">
+						<div class="toolbar-menu-img sj_icons"></div>
+						<p style="margin-top: 0.22rem">事件统计</p>
+					</a>
+					<a class="toolbar-menu-items" href="zhkh.html">
+						<div class="toolbar-menu-img zh_icons"></div>
+						<p>综合考核</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="nav-menu">
+			<div class="toolbar-menu-girds">
+				<a class="toolbar-menu-items" href="ksxh.html">
+					<div class="toolbar-menu-img hw_icons"></div>
+					<p style="margin-top: 0.35rem">开始巡海</p>
+				</a>
+				<a class="toolbar-menu-items " href="sbsj.html">
+					<div class="toolbar-menu-img xh_icons"></div>
+					<p>快速上报</p>
+				</a>
+				<a class="toolbar-menu-items" href="sjgl.html">
+					<div class="toolbar-menu-img sj_icons"></div>
+					<p style="margin-top: 0.22rem">事件管理</p>
+				</a>
+				<a class="toolbar-menu-items" href="xhrz.html">
+					<div class="toolbar-menu-img zh_icons"></div>
+					<p>巡海日志</p>
+				</a>
+				<a class="toolbar-menu-items" href="dlxx.html">
+					<div class="toolbar-menu-img hw_icons"></div>
+					<p style="margin-top: 0.35rem">地理信息</p>
+				</a>
+				<a class="toolbar-menu-items" href="new.html">
+					<div class="toolbar-menu-img xh_icons"></div>
+					<p>热点信息</p>
+				</a>
+				<a class="toolbar-menu-items" href="pwk.html">
+					<div class="toolbar-menu-img sj_icons"></div>
+					<p style="margin-top: 0.22rem">排污口登记</p>
+				</a>
+				<a class="toolbar-menu-items" href="hd.html">
+					<div class="toolbar-menu-img zh_icons"></div>
+					<p>我的海湾</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/weUI/jquery-weui.min.js"></script>
+<script type="text/javascript" src="js/swiper/swiper.min.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+		//首页banner轮播
+	var mySwiper = new Swiper('.swiper-container1',{
+		autoplay: 2000,//可选选项，自动滑动
+		pagination : '.swiper-pagination',
+		paginationClickable :true,
+	});
+</script>
+</html>

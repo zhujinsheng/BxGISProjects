@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@drawable/map_bearch_bg"
+                  android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x35"
+        android:layout_marginRight="@dimen/x35"
+        android:layout_marginTop="@dimen/y25"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="@string/map_beach_type"
+            android:textColor="@color/tv_black_0"
+            android:textSize="@dimen/sp_18"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y10"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_map_beach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="@string/map_beach"
+            android:textColor="@color/btn_blue_login"
+            android:textSize="@dimen/sp_18"/>
+
+        <View
+            android:layout_width="@dimen/x3"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:background="@color/tv_gray_4"/>
+
+        <TextView
+            android:id="@+id/tv_map_benchland"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/map_benchland"
+            android:textColor="@color/tv_black_0"
+            android:textSize="@dimen/sp_18"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/y15"
+        android:paddingTop="@dimen/y15"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/y25"
+        android:background="@color/tv_gray_5"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <TextView
+            android:id="@+id/tv_beach_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="@string/map_nearby_beach"
+            android:textColor="@color/tv_black_1"
+            android:textSize="@dimen/sp_16"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/map_distance"
+            android:textColor="@color/tv_black_1"
+            android:textSize="@dimen/sp_16"/>
+    </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/y25"
+            android:id="@+id/rv_map_beachType"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/x90"
+        android:layout_height="@dimen/x90"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y20"
+        android:src="@mipmap/map_close"/>
+</LinearLayout>

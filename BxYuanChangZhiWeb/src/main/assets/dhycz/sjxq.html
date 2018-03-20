@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="js/weUI/weui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/weUI/jquery-weui.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+   	<link href="css/common.css" rel="stylesheet" type="text/css" />
+   	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+   	<script type="text/javascript" src="js/view.js"></script>
+   	 <script type="text/javascript" src="js/vue.js" ></script>
+    <title>事件详情</title>
+    <script defer="deter">
+    	$(function(){
+    		var urls=window.location.href;
+			var urls=urls.split("=");
+			var datalist;
+		
+			$.ajax({
+					url:"http://localhost:18082/db/common/get/TbEvents/"+urls[1],
+					type:"POST",
+					dataType:"json",
+					
+					success:function(data){
+						console.log(data)
+						datalist=data;
+						var vm = new Vue({
+							el: '#app',
+							data: {
+							    items: datalist
+							},
+							computed:{
+								items:function(){
+									return vm.items
+								}
+							}
+						})
+					}
+				})
+    	})
+    	
+    			
+    </script>
+</head>
+<body>
+	<header class="head head-map">
+		<h4>事件详情</h4>
+		<span class="back" onclick="window.history.back(-1)"></span>
+	</header>
+	<div class="index-container">
+		<div class="detail-lunbo">
+			<div class="detail-lunbo"></div>
+			<!--<div class="swiper-container1">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><div class="detail-lunbo"></div></div>
+			        <div class="swiper-slide"><div class="detail-lunbo"></div></div>
+			        <div class="swiper-slide"><div class="detail-lunbo"></div></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			</div>-->
+		</div>
+		<div class="event-detail-content" id="app">
+			<div class="event-detail-lunbo">
+				<div class="swiper-container2">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide">
+				        	<div class="event-detail-lists">
+								<div class="event-detail-lists-slide">
+									<div class="p-all">
+										<p class="p-thead">事件描述：</p>
+										<p class="p-td">主要河道转弯处产生大量水浮莲及漂浮垃圾，有些靠边居住的农户往河边倒垃圾。</p>
+									</div>
+									<div class="p-all">
+										<p class="p-thead">河流名称：</p>
+										<p class="p-td">东江乌镇</p>
+									</div>
+									<div class="p-all">
+										<p class="p-thead">事件类别：</p>
+										
+										<p class="p-td"  v-if="items">{{items.describe}}</p>
+									</div>
+									<div class="p-all">
+										<p class="p-thead">上报地址：</p>
+										<p class="p-td">广东省河源市东源县105乡道靠近乌镇
+											<i class="event-map-icons"></i>
+										</p>
+										<p class="p-yellow">距离我187.16km</p>
+									</div>
+									<div class="p-all">
+										<p class="p-thead">事件状态：</p>
+										<p class="p-td">处理中</p>
+									</div>
+								</div>
+							</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<div class="event-detail-lists">
+								<div class="event-detail-lists-slide">
+									<h4>具体环节</h4>
+									<div class="event-detail-items">
+										<div class="event-round"><i class="event-round-small"></i></div>
+										<div class="event-detail-itemsbar">
+											<p>主要河道转弯处产生大量垃圾等等看内容大量垃圾等等看内容大量垃圾等等看内容。</p>
+											<p class="event-detail-time">2017/10/12  12:22<span>上报人：王杰希</span></p>
+										</div>
+									</div>
+									<div class="event-line"></div>
+								</div>
+							</div>
+				        </div>
+				    </div>
+				    <div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<!--<button class="p-btn" onclick="location.href='clsj.html'">处理</button>-->
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/weUI/jquery-weui.min.js"></script>
+<script src="js/swiper/swiper.min.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+	$(function(){
+		var mySwiper = new Swiper('.swiper-container2',{
+			//autoplay: 2000,//可选选项，自动滑动
+			pagination : '.swiper-pagination',
+			paginationClickable :true,
+		});
+		
+	
+
+	
+
+	})
+	
+</script>
+</html>

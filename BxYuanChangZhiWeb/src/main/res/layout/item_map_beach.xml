@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <LinearLayout
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x35"
+        android:layout_marginRight="@dimen/x35"
+        android:layout_marginTop="@dimen/y25"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/x10"
+        android:paddingTop="@dimen/x10"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/tv_beach_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/map_nearby_beach"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/tv_black_0"
+            android:textSize="@dimen/sp_17"/>
+
+        <TextView
+            android:id="@+id/tv_beach_distance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/map_distance"
+            android:textColor="@color/tv_black_0"
+            android:textSize="@dimen/sp_17"/>
+    </LinearLayout>

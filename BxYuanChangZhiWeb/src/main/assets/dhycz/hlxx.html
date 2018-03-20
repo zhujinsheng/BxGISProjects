@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="js/weUI/weui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/weUI/jquery-weui.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+   	<link href="css/common.css" rel="stylesheet" type="text/css" />
+
+	<link href="js/olmap/js/openlayers/css/ol.css" rel="stylesheet" type="text/css"></link>
+	<link href="js/olmap/res/css/bxmap.css" rel="stylesheet" type="text/css"></link>
+
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/olmap/js/openlayers/build/ol.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Common.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Config.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Resource.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/DataClear.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Reader.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Map.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Layer.js"></script>
+
+    <title>河流详情</title>
+</head>
+<body>
+	<header class="head head-map">
+		<h4>河流详情</h4>
+		<span class="back" onclick="window.history.back(-1)"></span>
+	</header>
+	<div class="map1" id="olmap"></div>
+	<div class="map-toolbar map-nv">
+		<ul>
+			<li id="area-active"><i class="map-toolbar-icons area-icons"></i></li>
+			<li id="map-grouplayer-switcher"><i class="map-toolbar-icons qh-icons"></i></li>
+			<li id="map-w-location"><i class="map-toolbar-icons fw-icons"></i></li>
+		</ul>
+	</div>
+	<div class="map-zhezhao"></div>
+	<div class="map-nav-menu map-menubar">
+		<div class="gk-con-ret"></div>
+		<ul>
+			<li name="basicMsg"><i class="ic ic01"></i>基本信息</li>
+			<li name="publiMsg"><i class="ic ic02"></i>信息公开</li>
+			<li name="policy"><i class="ic ic03"></i>一河一策</li>
+			<li name="drainRecord"><i class="ic ic04"></i>排污口</li>
+		</ul>
+	</div>
+	<div class="map-container">
+		<div class="map-bottom-dialog">
+			<div class="map-bottom-dialog-center">
+				<div class="map-bottom-dialog-container">
+					<div class="map-bottom-lists">
+						<div class="map-bottom-form basic-message">
+							<h4 class="form-title"><i class="ic ic01"></i>基本信息</h4>
+							<div class="form-lists">
+								<h4 class="form-lists-title">河溪水</h4>
+								<table class="form-table">
+									<tr>
+										<th>河流编号：</th>
+										<td>HXS00000RIIJNISJSJS</td>
+										<th>所属区县：</th>
+										<td>东源县</td>
+									</tr>
+									<tr>
+										<th>河道起点：</th>
+										<td>源头下围</td>
+										<th>河道等级：</th>
+										<td>县级</td>
+									</tr>
+									<tr>
+										<th>河道终点：</th>
+										<td>仙塘镇竹溪村</td>
+										<th>河道长度：</th>
+										<td>14.07km</td>
+									</tr>
+									<tr>
+										<th>集雨面积：</th>
+										<td>82.74km2</td>
+										<th>河长职责：</th>
+										<td>——</td>
+									</tr>
+								</table>
+							</div>
+							<div class="form-lists">
+								<h4 class="form-lists-title">河长信息</h4>
+								<table class="form-table">
+									<tr>
+										<th>县级河：</th>
+										<td>王杰希 <a href="tel:13800138000" class="telbtn">
+											<i class="tel-icons"></i>
+										</a></td>
+										<th>河长职务：</th>
+										<td>河长职务</td>
+									</tr>
+								</table>
+							</div>
+							<div class="form-lists">
+								<h4 class="form-lists-title">河段信息</h4>
+								<table cellpadding="0" cellspacing="0" class="form-table">
+									<tr>
+										<th>河段名称：</th>
+										<td>溪水水灯塔镇段</td>
+										<th>河长：</th>
+										<td>王杰希<a href="tel:13800138000" class="telbtn">
+											<i class="tel-icons"></i>
+										</a></td>
+									</tr>
+									<tr>
+										<th>河段名称：</th>
+										<td>东江镇口段</td>
+										<th>河长：</th>
+										<td>黄邦文<a href="tel:13800138000" class="telbtn">
+											<i class="tel-icons"></i>
+										</a></td>
+									</tr>
+									<tr>
+										<th>河段名称：</th>
+										<td>东江镇口段</td>
+										<th>河长：</th>
+										<td>黄邦文<a href="tel:13800138000" class="telbtn">
+											<i class="tel-icons"></i>
+										</a></td>
+									</tr>
+									<tr>
+										<th>河段名称：</th>
+										<td>东江镇口段</td>
+										<th>河长：</th>
+										<td>黄邦文<a href="tel:13800138000" class="telbtn">
+											<i class="tel-icons"></i>
+										</a></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="map-bottom-form public-message">
+							<h4 class="form-title"><i class="ic ic02"></i>信息公开
+								<div class="select-parent">
+									<select class="area-select time-select" name="select1">
+								        <option selected="" value="1">本周</option>
+								        <option value="2">本月</option>
+							      	</select>
+							      	<div class="content-trigon-zhijiao trigon-color">
+							            <span><i></i></span>
+							        </div>
+								</div>
+								<div class="select-parent">
+									<select class="area-select" name="select1" onchange="show(this)">
+								        <option selected="" value="1">事件列表</option>
+								        <option value="2">巡河日志</option>
+							      	</select>
+							      	<div class="content-trigon-zhijiao trigon-color">
+							            <span><i></i></span>
+							        </div>
+								</div>
+							</h4>
+							<div class="public-message-center">
+								<div class="event-lists">
+									<div class="listbox">
+							    		<div class="detail-items" onclick="location.href='sjxq.html'">
+							    			<div class="public-message-imgbar"><img src="img/det-img.png"></div>
+							    			<div class="public-message-content">
+							    				<h4>四加水蓝口镇镇段  <span>处理中</span></h4>
+							    				<p>河道主要存在水浮莲及少量垃圾。</p>
+							    				<p class="detail-condition">
+									    			<span class="detail-time">2018-03-12 16:42</span>
+									    			<span class="detail-address">所属区县：<span class="blue-font">蓝口镇</span></span>
+									    		</p>
+							    			</div>
+							    		</div>
+							  		</div>
+							  		<div class="listbox">
+							    		<div class="detail-items">
+							    			<div class="public-message-imgbar"><img src="img/det-img.png"></div>
+							    			<div class="public-message-content">
+							    				<h4>四加水蓝口镇镇段  <span>处理中</span></h4>
+							    				<p>河道主要存在水浮莲及少量垃圾。</p>
+							    				<p class="detail-condition">
+									    			<span class="detail-time">2018-03-12 16:42</span>
+									    			<span class="detail-address">所属区县：<span class="blue-font">蓝口镇</span></span>
+									    		</p>
+							    			</div>
+							    		</div>
+							  		</div>
+							  		<div class="listbox">
+							    		<div class="detail-items">
+							    			<div class="public-message-imgbar"><img src="img/det-img.png"></div>
+							    			<div class="public-message-content">
+							    				<h4>四加水蓝口镇镇段  <span>处理中</span></h4>
+							    				<p>河道主要存在水浮莲及少量垃圾。</p>
+							    				<p class="detail-condition">
+									    			<span class="detail-time">2018-03-12 16:42</span>
+									    			<span class="detail-address">所属区县：<span class="blue-font">蓝口镇</span></span>
+									    		</p>
+							    			</div>
+							    		</div>
+							  		</div>
+							  		<div class="listbox">
+							    		<div class="detail-items">
+							    			<div class="public-message-imgbar"><img src="img/det-img.png"></div>
+							    			<div class="public-message-content">
+							    				<h4>四加水蓝口镇镇段  <span>处理中</span></h4>
+							    				<p>河道主要存在水浮莲及少量垃圾。</p>
+							    				<p class="detail-condition">
+									    			<span class="detail-time">2018-03-12 16:42</span>
+									    			<span class="detail-address">所属区县：<span class="blue-font">蓝口镇</span></span>
+									    		</p>
+							    			</div>
+							    		</div>
+							  		</div>
+						  		</div>
+						  		<div class="record-lists">
+						  			<table cellpadding="0" cellspacing="0" class="record-tabs">
+						  				<thead>
+						  					<tr>
+						  						<th>名称</th>
+						  						<th>时间</th>
+						  					</tr>
+						  				</thead>
+						  				<tr>
+							  				<td>竹溪水镇百料村</td>
+							  				<td>10-12 11:55</td>
+							  			</tr>
+							  			<tr>
+							  				<td>竹溪水镇百料村</td>
+							  				<td>10-12 11:55</td>
+							  			</tr>
+							  			<tr>
+							  				<td>竹溪水镇百料村</td>
+							  				<td>10-12 11:55</td>
+							  			</tr>
+							  			<tr>
+							  				<td>竹溪水镇百料村</td>
+							  				<td>10-12 11:55</td>
+							  			</tr>
+						  			</table>
+						  		</div>
+							</div>
+							
+						</div>
+						<div class="map-bottom-form drain-message">
+							<h4 class="form-title"><i class="ic ic03"></i>排污口</h4>
+							<div class="listbox">
+					    		<div class="detail-items" onclick="location.href='pwkdj.html'">
+					    			<div class="public-message-imgbar"><img src="img/det-img.png"></div>
+					    			<div class="public-message-content">
+					    				<h4>四加水蓝口镇镇段</h4>
+					    				<p class="detail-condition">排污口名称：木晶石205。</p>
+					    				<p class="detail-condition">
+							    			<span class="detail-time">2018/03/12 16:42</span>
+							    			<span class="detail-address">上报人：<span class="blue-font">王杰西</span></span>
+							    		</p>
+					    			</div>
+					    		</div>
+					  		</div>
+					  		<div class="listbox">
+					    		<div class="detail-items">
+					    			<div class="public-message-imgbar"><img src="img/det-img.png"></div>
+					    			<div class="public-message-content">
+					    				<h4>四加水蓝口镇镇段</h4>
+					    				<p class="detail-condition">排污口名称：木晶石205。</p>
+					    				<p class="detail-condition">
+							    			<span class="detail-time">2018/03/12 16:42</span>
+							    			<span class="detail-address">上报人：<span class="blue-font">王杰西</span></span>
+							    		</p>
+					    			</div>
+					    		</div>
+					  		</div>
+					  		<div class="listbox">
+					    		<div class="detail-items">
+					    			<div class="public-message-imgbar"><img src="img/det-img.png"></div>
+					    			<div class="public-message-content">
+					    				<h4>四加水蓝口镇镇段</h4>
+					    				<p class="detail-condition">排污口名称：木晶石205。</p>
+					    				<p class="detail-condition">
+							    			<span class="detail-time">2018/03/12 16:42</span>
+							    			<span class="detail-address">上报人：<span class="blue-font">王杰西</span></span>
+							    		</p>
+					    			</div>
+					    		</div>
+					  		</div>
+					  		<div class="listbox">
+					    		<div class="detail-items">
+					    			<div class="public-message-imgbar"><img src="img/det-img.png"></div>
+					    			<div class="public-message-content">
+					    				<h4>四加水蓝口镇镇段</h4>
+					    				<p class="detail-condition">排污口名称：木晶石205。</p>
+					    				<p class="detail-condition">
+							    			<span class="detail-time">2018/03/12 16:42</span>
+							    			<span class="detail-address">上报人：<span class="blue-font">王杰西</span></span>
+							    		</p>
+					    			</div>
+					    		</div>
+					  		</div>
+						</div>
+						<div class="map-bottom-form policy-message">
+							<h4 class="form-title"><i class="ic ic04"></i>一河一策</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/weUI/jquery-weui.min.js"></script>
+<script src="js/swiper/swiper.min.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/wmap/layers.js"></script>
+<script type="text/javascript" src="js/wmap/map-hlxx.js"></script>
+</html>

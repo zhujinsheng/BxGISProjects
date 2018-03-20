@@ -1,0 +1,59 @@
+/*.hz-items{
+	padding-top: 0rem; 
+}*/
+.hz-items .search-result-lists-container{
+	padding-top: 0;
+}
+ul.mtree a {
+  display: block;
+}
+
+ul.mtree.transit li>a{
+	color: #000;
+	border-bottom: 1px solid #e5e5e5;
+}
+ul.mtree.transit li{
+  position: relative;
+  font-size: 0.3rem;
+}
+ul.mtree.transit li.mtree-closed > a>i{
+		background: url(../img/slide.png) no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+ul.mtree.transit li.mtree-open > a>i{
+    background: url(../img/arrow_icons.png) no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+ul.mtree.transit li> a:before,ul.mtree.transit li> a:before {
+  	content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+  	right: 20px;
+  	top: 0.3rem;
+}
+/*.paddingTop{
+	padding-top: 0.45rem;
+}*/
+ul.mtree.bubba a{
+	padding: 0.2rem 0 0.2rem 0.3rem;
+}
+ul.mtree.transit li li > a {
+  padding-left: 0.8rem;
+}
+ul.mtree.transit li li li > a {
+  padding-left: 1.2rem;
+}
+ul.mtree.transit li li li li > a {
+ padding-left: 1.65rem;
+}
+ul.mtree.transit li li li li li > a {
+  padding-left: 1.65rem;
+}

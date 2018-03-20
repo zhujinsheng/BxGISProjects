@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="js/weUI/weui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/weUI/jquery-weui.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+   	<link href="css/common.css" rel="stylesheet" type="text/css" />
+
+	<link href="js/olmap/js/openlayers/css/ol.css" rel="stylesheet" type="text/css"></link>
+	<link href="js/olmap/res/css/bxmap.css" rel="stylesheet" type="text/css"></link>
+	<link href="js/olmap/res/css/popupoverlay.css" rel="stylesheet" type="text/css"></link>
+
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/olmap/js/openlayers/build/ol.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Common.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Config.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Resource.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/DataClear.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Reader.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Map.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Layer.js"></script>
+	<script type="text/javascript" src="js/olmap/js/bxmap/Overlay.js"></script>
+    <title>地理信息</title>
+</head>
+<body>
+	<header class="head head-map">
+		<h4>东源水系河</h4>
+		<span class="back" onclick="window.history.back(-1)"></span>
+	</header>
+	<div class="map1" id="olmap"></div>
+	<div class="map-area-groud map-nv">
+		<ul>
+			<li class="active">
+				<i class="qy-icons"></i>
+				<p>区域</p>
+			</li>
+			<li>
+				<i class="hd-icons"></i>
+				<p>河道</p>
+			</li>
+			<li>
+				<p>附近<br />河流</p>
+			</li>
+		</ul>
+	</div>
+	<div class="map-toolbar map-tuli">
+		<ul>
+			<li id="map-grouplayer-switcher"><i class="map-toolbar-icons qh-icons"></i></li>
+			<li id="map-w-location"><i class="map-toolbar-icons fw-icons"></i></li>
+			<li id="tlClick"><i class="map-toolbar-icons"></i>图例</li>
+		</ul>
+	</div>
+	<div class="map-nav-menu map-tuli map-tlbar">
+		<ul>
+			<li><i class="ic tl-ic01"></i>水库</li>
+			<li><i class="ic tl-ic02"></i>陂</li>
+			<li><i class="ic tl-ic03"></i>提防</li>
+			<li><i class="ic tl-ic04"></i>排污口</li>
+			<li><i class="ic tl-ic05"></i>水电站</li>
+			<li><i class="ic tl-ic06"></i>坝</li>
+			<li><i class="ic tl-ic07"></i>水文站</li>
+		</ul>
+	</div>
+	
+	
+</body>
+<script type="text/javascript" src="js/weUI/jquery-weui.min.js"></script>
+<script src="js/swiper/swiper.min.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/wmap/layers.js"></script>
+<script type="text/javascript" src="js/wmap/map-dlxx.js"></script>
+</html>
